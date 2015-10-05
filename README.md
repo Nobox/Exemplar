@@ -1,2 +1,2 @@
 # Exemplar
-This repository holds example applications of new technologies. 
+This repository holds example applications of new technologies.
