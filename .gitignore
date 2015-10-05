@@ -1,0 +1,8 @@
+/vendor
+.env
+.DS_Store
+.env.example
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
