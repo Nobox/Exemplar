@@ -1,2 +1,2 @@
 # Exemplar
-This repo is to test some technologies
+This repository holds example applications of new technologies. 
