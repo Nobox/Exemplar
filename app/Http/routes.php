@@ -11,6 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->welcome();
-});
+$app->get('/', [
+    'uses' => 'AppController@index',
+    'as' => 'index'
+]);
