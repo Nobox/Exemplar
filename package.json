@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "laravel-elixir": "^3.0.0",
-    "vue": "^0.12.16"
+    "vue": "^0.12.16",
+    "vue-router": "^0.6.2"
   }
 }
