@@ -1,0 +1,10 @@
+<h1>{{ question.question }}</h1>
+<ul class="list-unstyled">
+    <template v-repeat="option in question.options">
+        <li>
+            <div class="checkbox">
+                <label><input type="checkbox"> {{ option }}</label>
+            </div>
+        </li>
+    </template>
+</ul>
