@@ -15,7 +15,9 @@ var app = {
  * @return {object}
  */
 app.data = function () {
-    return {};
+    return {
+        results: {}
+    };
 }
 
 /**
