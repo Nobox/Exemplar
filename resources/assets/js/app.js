@@ -25,13 +25,22 @@ app.components['start'] = require('./components/start');
 app.components['trivia'] = require('./components/trivia');
 app.components['finish'] = require('./components/finish');
 
+/**
+ * Create main app component
+ * @type {Vue}
+ */
 var root = Vue.extend(app);
 
 /**
- * Define routes
+ * Create router
  */
 Vue.use(VueRouter);
 var router = new VueRouter();
+
+/**
+ * Define routes
+ * @type {object}
+ */
 router.map({
     '/': {
         component: app.components['start']
