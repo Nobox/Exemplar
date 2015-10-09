@@ -53,17 +53,35 @@ question.methods.recordAnswer = function () {
  * @return {null}
  */
 question.methods.calculateResults = function () {
-    //
+    var incorrect = 0;
+    var correct = 0;
+    var results = {};
+
+    for (var i = 0; i < this.answers.length; i++) {
+        var answer = this.answers[i];
+
+        if (this.questions[i].correct === answer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+    };
+
+    results.correct = correct;
+    results.incorrect = incorrect;
+
+    this.$root.results = results;
 }
 
 /**
- * Move to the next question on the chain.
+ * Move to the next question on the chain
+ * and go to the "finish" page
  * @return {null}
  */
 question.methods.moveToNextQuestion = function () {
     if (this.totalQuestions === (this.currentQuestionIndex + 1)) {
-        // show finished and results
-        console.log('Show results!');
+        this.calculateResults();
+        this.$route.router.go('finish');
         return;
     }
 
