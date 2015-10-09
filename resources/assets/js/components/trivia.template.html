@@ -1,7 +1,8 @@
 <div class="col-md-12">
-    <template v-repeat="question in questions">
-        <question question="{{ question }}"></question>
-    </template>
+    <question questions="{{ questions }}"
+              answers="{{@ answers }}"
+              current-question="{{@ currentQuestion }}"
+              current-question-index="{{@ currentQuestionIndex }}"></question>
 </div>
 
 <hr>

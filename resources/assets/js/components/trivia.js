@@ -1,5 +1,6 @@
 var trivia = {
     template: require('./trivia.template.html'),
+    methods: {},
     components: {}
 };
 
@@ -9,7 +10,10 @@ var trivia = {
  */
 trivia.data = function () {
     return {
-        questions: require('../data/questions')
+        questions: require('../data/questions'),
+        answers: [],
+        currentQuestionIndex: 0,
+        currentQuestion: require('../data/questions')[0]
     };
 }
 

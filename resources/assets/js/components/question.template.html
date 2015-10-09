@@ -1,10 +1,19 @@
-<h1>{{ question.question }}</h1>
+<h1>{{ currentQuestion.question }} ({{ currentQuestionIndex + 1 }})</h1>
 <ul class="list-unstyled">
-    <template v-repeat="option in question.options">
+    <template v-repeat="option in currentQuestion.options">
         <li>
             <div class="checkbox">
-                <label><input type="checkbox"> {{ option }}</label>
+                <label>
+                    <input type="radio"
+                           name="option"
+                           v-model="selectedAnswer"
+                           value="{{ $index }}"> {{ option }}
+                </label>
             </div>
         </li>
     </template>
 </ul>
+
+<hr>
+
+<a href="#" class="btn btn-default" v-on="click: answerQuestion">Next Question</a>
